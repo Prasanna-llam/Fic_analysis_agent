@@ -66,7 +66,7 @@ if uploaded_file:
             st.success("✅ Analysis completed.")
             st.dataframe(df[["Summary", "Category", "Reason (Other)"]])
 
-            out_path = "/mnt/data/AI_Diagnostic_Result.xlsx"
+           out_path = "/mnt/data/AI_Diagnostic_Result.xlsx"
             df.to_excel(out_path, index=False)
             with open(out_path, "rb") as f:
                 st.download_button("📥 Download Result File", f, file_name="AI_Diagnostic_Result.xlsx")
